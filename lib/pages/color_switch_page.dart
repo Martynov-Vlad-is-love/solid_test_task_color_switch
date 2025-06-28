@@ -13,6 +13,7 @@ class ColorSwitchPage extends StatelessWidget {
     final size = MediaQuery.of(context).size;
 
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(title: const Text('Test task')),
         body: GestureDetector(
