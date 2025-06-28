@@ -15,17 +15,15 @@ class ColorSwitchPage extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(title: const Text('Test task')),
-        body: SizedBox.expand(
-          child: GestureDetector(
-            onTap: colorController.generateNewColor,
-            child: AnimatedContainer(
-              width: size.width,
-              height: size.width,
-              color: colorController.getCurrentColor(),
-              duration: const Duration(seconds: 1),
-              child: const Center(
-                child: Text('Hey there', style: TextStyle(fontSize: 25)),
-              ),
+        body: GestureDetector(
+          onTap: colorController.generateNewColor,
+          child: AnimatedContainer(
+            width: size.width,
+            height: size.height,
+            color: colorController.getCurrentColor(),
+            duration: const Duration(seconds: 1),
+            child: const Center(
+              child: Text('Hey there', style: TextStyle(fontSize: 25)),
             ),
           ),
         ),
